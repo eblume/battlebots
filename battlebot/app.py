@@ -6,7 +6,7 @@ from .move import Move
 
 def play_turn(history, player_number):
     # SUPER SECRET OPTIMIZATION
-    return Move(Hand.ROCK, art=lines)
+    return Move(Hand.PAPER, art=lines)
 
 
 MY_ART = """\
