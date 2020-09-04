@@ -1,4 +1,4 @@
-IMAGE_TAG ?= battlebot-python
+IMAGE_TAG ?= eblume/rps_prolo
 HISTORY ?= RP2;SS1;SS2;
 
 .PHONY: help
@@ -16,3 +16,7 @@ run: image  ## Run the image without any history
 .PHONY: run-with-history
 run-with-history: image  ## Run the image with a provided history
 	docker run -e PLAYER_NUMBER=1 --network=none $(IMAGE_TAG) "$(HISTORY)"
+
+.PHONY: push
+push: image  ## Push the docker image
+	docker push $(IMAGE_TAG)
