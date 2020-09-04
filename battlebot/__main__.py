@@ -16,4 +16,6 @@ def main(argv):
     print(move.to_json())
 
 
-main(sys.argv[1:])
+# main(sys.argv[1:])
+
+print("Hello world!")
